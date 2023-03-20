@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""
-This module defines Amenity Class
-"""
+""" State Module for HBNB project """
+from models.base_model import BaseModel, Base
+from models import storage_type
+from sqlalchemy import Column, String
 
-from models.base_model import BaseModel
 
-
-class Amenity(BaseModel):
-    """
-    Amenity class
-    """
-    name = ""
+class Amenity(BaseModel, Base):
+    '''amenity class'''
+    __tablename__ = 'amenities'
+    if storage_type == 'db':
+        name = Column(String(128), nullable=False)
+    else:
+        name = ""
