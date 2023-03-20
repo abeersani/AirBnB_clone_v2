@@ -1,0 +1,71 @@
+.container .filters {
+	position: relative;
+	background: #FFF;
+	height: 70px;
+	width: 100%;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+.filters button {
+	font: 18px;
+	background: #FF5A5F;
+	color: #FFF;
+	height: 48px;
+	width: 20%;
+	border-style: none;
+	border-radius: 4px;
+	position: absolute;
+	top: 15%;
+	right: 30px;
+}
+
+.filters button:hover {
+	opacity: 0.9;
+}
+
+.filters div {
+	display: inline-block;
+	position: relative;
+	width: 25%;
+}
+
+.filters .locations {
+	border-right: 1px solid #DDD;
+	height: 100%;
+	width: 25%;
+}
+
+.filters .amenities {
+	position: absolute;
+	height: 100%;
+	width: 25%;
+}
+.filters h3 {
+	margin-left: 15%;
+	font-weight: 600;
+	margin-bottom: 0; /* Remove bottom margin inline-block */
+}
+.filters h4 {
+	margin-left: 15%;
+	font: 14px;
+	font-weight: 400;
+	margin-top: 0; /* Remove top margin inline-block */
+}
+
+.filters ul {
+	list-style-type: none; /* Remove marker from list*/
+}
+
+.filters .popover {
+	display: none; /* Don't display by default */
+	background: #FAFAFA;
+	width: 100%;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+.filters .amenities:hover .popover,
+.filters .locations:hover .popover {
+	display: block; /* Display on hover */
+}
